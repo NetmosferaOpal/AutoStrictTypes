@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 use TypeError;
 use function Netmosfera\OpalAutoStrictTypes\addStrictTypesToPHPFileNodes;
 
-class PreprocessorTest extends TestCase
+class addStrictTypesToPHPFileNodesTest extends TestCase
 {
     public function parse(String $PHP){
         return (new PF())->create(PF::ONLY_PHP7)->parse("<?php " . $PHP);
