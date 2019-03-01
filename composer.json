@@ -1,0 +1,33 @@
+{
+    "minimum-stability": "dev",
+    "name": "netmosfera/opal-auto-strict-types",
+    "homepage": "https://github.com/NetmosferaOpal/AutoStrictTypes",
+    "license": "MIT",
+    "authors": [{
+        "name": "Wes",
+        "role": "Smith",
+        "homepage": "https://github.com/Netmosfera"
+    }],
+    "require": {
+        "php": ">=7.2 <8",
+        "netmosfera/opal": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=8 <9",
+        "netmosfera/opal": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netmosfera\\OpalAutoStrictTypes\\": "src/"
+        },
+        "files": [
+            "src/addStrictTypesToPackage.inc.php",
+            "src/addStrictTypesToPHPFileNodes.inc.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Netmosfera\\OpalAutoStrictTypesTests\\": "tests/"
+        }
+    }
+}
