@@ -3,11 +3,6 @@
     "name": "netmosfera/opal-auto-strict-types",
     "homepage": "https://github.com/NetmosferaOpal/AutoStrictTypes",
     "license": "MIT",
-    "authors": [{
-        "name": "Wes",
-        "role": "Smith",
-        "homepage": "https://github.com/Netmosfera"
-    }],
     "require": {
         "php": ">=7.2 <8",
         "netmosfera/opal": "dev-master"
