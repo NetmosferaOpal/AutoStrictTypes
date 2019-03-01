@@ -8,6 +8,7 @@ use PhpParser\Node\Stmt\Declare_;
 use PhpParser\Node\Stmt\DeclareDeclare;
 use function array_unshift;
 
+/** @internal */
 function addStrictTypesToPHPFileNodes(Array $nodes): array{
     $firstNode = $nodes[0] ?? NULL;
 
