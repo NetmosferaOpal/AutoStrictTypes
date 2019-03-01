@@ -11,4 +11,33 @@
 [![][status]][status-URL]
 [![][coverage]][coverage-URL]
 
-Makes `strict_types` defaulting to `1` rather than `0`, on a per-package basis.
+Makes `strict_types` default to `1` rather than `0`, on a per-package basis.
+
+## Installation in opal.php
+
+```php
+<?php declare(strict_types = 1);
+
+use Netmosfera\Opal\Identifier;
+use Netmosfera\Opal\Package;
+use Netmosfera\Opal\PackagePath;
+use Netmosfera\Opal\Path;
+use function Netmosfera\Opal\Opal;
+use function Netmosfera\OpalAutoStrictTypes\addStrictTypesToPackage;
+
+(function(){
+    $vendor  = new Identifier("WayneEnterprises");
+    $name    = new Identifier("BatMobile");
+    $package = new Package($vendor, $name);
+    $path    = new Path(__DIR__ . "/src");
+    
+    Opal()->addPackage(new PackagePath($package, $path));
+
+    if(!NETMOSFERA_OPAL_LOADER_STATIC){
+        
+        /* ... */
+        
+        addStrictTypesToPackage($package);
+    }
+})();
+```
